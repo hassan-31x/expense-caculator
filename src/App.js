@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Header from './components/Header.js'
+import Balance from './components/Balance.js'
+import Comparison from './components/Comparison.js'
+import TransactionList from './components/TransactionList.js'
+import Add from './components/Add.js'
+
+import { GlobalProvider } from './context/GlobalState.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <div className="h-screen w-screen flex justify-center items-center flex-col bg-gray-100">
+        <div className="w-auto h-auto flex flex-col justify-start">
+          <Header />
+          <Balance />
+          <Comparison />
+          <TransactionList />
+          <Add />
+        </div>
+      </div>
+    </GlobalProvider>
   );
 }
 
