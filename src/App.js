@@ -12,7 +12,7 @@ function App() {
   return (
     <GlobalProvider>
       <div className="h-screen w-screen flex justify-center items-center flex-col bg-gray-100">
-        <div className="w-auto h-auto flex flex-col justify-start">
+        <div className="w-auto h-auto flex flex-col justify-start shadow-lg py-4 px-10 rounded-xl bg-gray-50">
           <Header />
           <Balance />
           <Comparison />
